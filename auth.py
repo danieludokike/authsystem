@@ -1,6 +1,5 @@
 database = dict()
 
-database["daniel"] = "password123"
 def login(u_name, p_word):
     if u_name in database.keys():
         password = database.get(u_name)
@@ -13,5 +12,6 @@ def login(u_name, p_word):
 
 
 def signup(u_name, p_word, p_word2):
-    pass
+    if p_word != p_word2:
+        print("The two passwords do not match!")
 
